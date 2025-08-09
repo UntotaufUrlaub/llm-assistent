@@ -7,7 +7,7 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN pip install fastapi, uvicorn, python-multipart
+RUN pip install fastapi uvicorn python-multipart
 
 EXPOSE 80
 
