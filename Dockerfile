@@ -7,10 +7,9 @@ WORKDIR /app
 COPY . /app
 
 # Install dependencies
-RUN pip install streamlit
+RUN pip install fastapi, uvicorn, python-multipart
 
-# Expose the Streamlit default port
 EXPOSE 80
 
 # Run the Streamlit app
-CMD ["streamlit", "run", "main.py", "--server.port=80", "--server.address=0.0.0.0", "--server.enableCORS=false", "--server.enableXsrfProtection=false"]
+CMD ["python", "main.py"]
